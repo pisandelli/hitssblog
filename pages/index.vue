@@ -8,8 +8,6 @@
 </script>
 
 <template lang="pug">
-//- Add Layout Composition
-centerL(intrinsic)
-  //- name-spaced component
-  ns-example
+CenterL
+  WPostCard
 </template>
