@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   ],
   components: {
     dirs: [
+      { path: '~/components/_widgets', pathPrefix: false, prefix: 'W' },
       '~/components'
     ]
   },
@@ -69,7 +70,7 @@ export default defineNuxtConfig({
       // Add custom options for HTML-Validator
       // https://html-validator.nuxtjs.org/#configuration-optional
       // https://html-validate.org/rules/index.html
-      logLevel: 'warning',
+      logLevel: 'warning'
     }],
     ['@nuxtjs/robots', {
       // add robots config here
