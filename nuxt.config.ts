@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       title: 'Nuxt 3 Scaffolding'
     }
   },
+
   // Read more about Nuxt Layers
   // https://nuxt.com/docs/getting-started/layers
   extends: [
@@ -18,12 +19,14 @@ export default defineNuxtConfig({
     // https://github.com/pisandelli/nuxt-layout-compositions
     'nuxt-layout-compositions'
   ],
+
   components: {
     dirs: [
       { path: '~/components/_widgets', pathPrefix: false, prefix: 'W' },
       '~/components'
     ]
   },
+
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
     styles: fileURLToPath(new URL('./assets/styles', import.meta.url))
@@ -34,7 +37,9 @@ export default defineNuxtConfig({
   typescript: {
     shim: false
   },
+
   css: ['@/assets/styles/reset.styl'],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -58,6 +63,7 @@ export default defineNuxtConfig({
       })
     ]
   },
+
   modules: [
     ['@nuxtjs/google-fonts', {
       // Add options for Google Fonts
@@ -102,5 +108,9 @@ export default defineNuxtConfig({
       // https://github.com/MorevM/vue-transitions#usage-with-nuxt
     }],
     '@pinia/nuxt'
-  ]
+  ],
+
+  devtools: {
+    enabled: true
+  }
 })

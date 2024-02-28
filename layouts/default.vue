@@ -10,12 +10,13 @@
 BasicLayout.layout
   header
     Topbar
-  main
+  CenterL(tag='main')
     slot
   footer
     p FOOTER
 </template>
 <style lang='stylus' scoped>
 .layout
+  --centerl-max-width: 63rem
   gap: var(--gap) 0
 </style>

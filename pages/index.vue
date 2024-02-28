@@ -8,6 +8,14 @@
 </script>
 
 <template lang="pug">
-CenterL
-  WPostCard
+Page(title='Todas as Postagens')
+  ClusterL(tag='section' center)
+    WPostCard
+    WPostCard
+    WPostCard
+    WPostCard
+
 </template>
+
+<style lang="stylus" scoped>
+</style>
