@@ -107,8 +107,19 @@ export default defineNuxtConfig({
       // Add custom options for vueTransitions
       // https://github.com/MorevM/vue-transitions#usage-with-nuxt
     }],
-    '@pinia/nuxt'
+    ['@pinia/nuxt', {
+      autoImports: [
+        'defineStore',
+        'acceptHMRUpdate'
+      ]
+    }]
   ],
+
+  runtimeConfig: {
+    public: {
+      API_BASE: '/api'
+    }
+  },
 
   devtools: {
     enabled: true
