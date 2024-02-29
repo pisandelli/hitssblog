@@ -14,6 +14,13 @@ definePageMeta({
 const email = ref<string>('')
 const password = ref<string>('')
 
+/**
+ * Logs the user in with the provided email and password.
+ * @async
+ * @function login
+ * @param {string} email - The user's email address.
+ * @param {string} password - The user's password.
+ */
 async function login() {
   await authStore.login(email.value, password.value)
 }

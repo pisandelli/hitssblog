@@ -1,3 +1,7 @@
+/**
+ * Array of Post objects representing blog posts.
+ */
+
 import type Post from '~/interfaces/Post'
 
 export const Posts: Post[] = [

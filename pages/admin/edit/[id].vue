@@ -6,7 +6,7 @@
 */
 import { usePostsStore } from '~/store/Posts'
 import { useAuthStore } from '~/store/Auth'
-import type Post from '~/interfaces/Post';
+import type Post from '~/interfaces/Post'
 
 const authStore = useAuthStore()
 const postStore = usePostsStore()
@@ -26,6 +26,11 @@ const content = ref(post?.content)
 const author = authStore.user?.name
 const dateModified = today
 
+/**
+ * Updates a post in the posts store by id with new edited values.
+ * @param {number} id - The id of the post to update
+ * @param {Post} editedPost - The edited post object with new values
+*/
 function updatePost() {
   const editedPost: Post = {
     id: +ID.value,
@@ -41,7 +46,6 @@ function updatePost() {
 
   postStore.updatePost(+ID.value, editedPost)
 }
-
 </script>
 
 <template lang="pug">

@@ -1,3 +1,7 @@
+/**
+ * Array of user objects with id, name, email and password properties.
+ */
+
 import type { User } from '~/interfaces/User'
 
 export const users: User[] = [

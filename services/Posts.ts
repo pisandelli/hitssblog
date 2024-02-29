@@ -1,11 +1,13 @@
+/**
+ * Gets all posts.
+ *
+ * Async method that returns a promise resolving to
+ * an array of post data. It calls a custom fetch method to
+ * retrieve the posts from the server.
+ */
+
 export default class PostsServices {
-  // Get all posts
-  async getPosts () {
+  async getPosts() {
     return await useCustomFetch('posts')
   }
-
-  // // Get course by ID
-  // async getCourseById (courseId: number) {
-  //   return await useCustomFetch(`course/${courseId}`)
-  // }
 }

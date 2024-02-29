@@ -9,7 +9,7 @@
 
 import type UserData from '~/interfaces/UserData'
 
-export async function useCustomFetch (path: string, body?: UserData) {
+export async function useCustomFetch(path: string, body?: UserData) {
   const config = useRuntimeConfig()
   if (!body) { return await $fetch(`${config.public.API_BASE}/${path}`) }
   return await $fetch(`${config.public.API_BASE}/${path}`, {
