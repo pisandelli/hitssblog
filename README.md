@@ -60,3 +60,8 @@ E siga a URL local criada.
 ```
 shamefully-hoist=true
 ```
+
+## Requisitos
+ * Node v18 ou superior
+
+Algumas extensões recomendadas seguem na pasta `.vscode` caso use este editor.
