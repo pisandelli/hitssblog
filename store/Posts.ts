@@ -34,14 +34,42 @@ export const usePostsStore = defineStore('Posts', () => {
     }
   }
 
+  /**
+   * Adds a new post to the posts array in state.
+   */
   function saveNewPost(post: Post) {
     posts.value.push(post)
+  }
+
+  /**
+   * Removes a post with the given ID from the posts array in state.
+   * Finds the index of the post with the matching ID and splices it out of the array.
+   */
+  function dropPost(id: number) {
+    const index = posts.value.findIndex(post => post.id === id)
+    if (index !== -1) {
+      posts.value.splice(index, 1)
+    }
+  }
+
+  /**
+   * Updates a post in the posts array.
+   * Finds the post with the matching ID and updates it with the new post data.
+  */
+  function updatePost(id: number, post: Post) {
+    const index = posts.value.findIndex(post => post.id === id)
+    if (index !== -1) {
+      console.log('bump', posts.value[index])
+      posts.value[index] = post
+    }
   }
 
   return {
     posts,
     fetchAllPosts,
-    saveNewPost
+    saveNewPost,
+    dropPost,
+    updatePost
   }
 }, { persist: { storage: persistedState.sessionStorage } })
 

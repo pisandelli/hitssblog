@@ -25,5 +25,4 @@ Page(title='Todas as Postagens')
   ClusterL(tag='section' center)
     template(v-for='post in posts' :key='post.id')
       WPostCard(:postData="post")
-
 </template>

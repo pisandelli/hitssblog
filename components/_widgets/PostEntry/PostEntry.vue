@@ -6,6 +6,8 @@
 */
 import type Post from '~/interfaces/Post'
 
+const emit = defineEmits(['drop'])
+
 defineProps<{
   post: Post
 }>()
@@ -23,8 +25,8 @@ Card(no-float).post-entry
       p.excerpt {{ post.excerpt }}
     footer
       ClusterL
-        Button(tag='a' outline href='#') Editar
-        Button(tag='a' danger href='#') Excluir
+        Button(outline @click="navigateTo('/admin/edit/' + post.id)") Editar
+        Button(danger @click="emit('drop', post.id)") Excluir
 </template>
 
 <style lang="stylus" scoped>

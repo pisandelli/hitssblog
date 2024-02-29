@@ -75,11 +75,13 @@ Page(title='Nova postagem')
         FormInput#banner(v-model='banner') URL do banner
         FormInput#content(v-model='content' type='textarea') Conteúdo
 
-        Button(success @click='savePost') Salvar
+        ClusterL(between)
+          Button(tag='a' href='/admin' primary icon='heroicons:arrow-left-16-solid') Lista de Posts
+          Button(success @click='savePost') Salvar
 
 </template>
 
 <style lang="stylus" scoped>
 .panel
-  inline-size: 30rem
+  inline-size: 25rem
 </style>

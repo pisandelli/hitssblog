@@ -1,3 +1,9 @@
+/**
+ * Defines a Nuxt middleware that checks if the user is authenticated.
+ *
+ * Checks if there is a user in localStorage, and compares the token
+ * to the token in the auth store. If no match, redirects to login.
+*/
 import { useAuthStore } from '~/store/Auth'
 
 export default defineNuxtRouteMiddleware((to, from) => {
