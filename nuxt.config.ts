@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'pt-br'
       },
-      title: 'Nuxt 3 Scaffolding'
+      title: 'Hitss Blog'
     }
   },
 
