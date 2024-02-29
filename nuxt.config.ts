@@ -112,7 +112,8 @@ export default defineNuxtConfig({
         'defineStore',
         'acceptHMRUpdate'
       ]
-    }]
+    }],
+    '@pinia-plugin-persistedstate/nuxt'
   ],
 
   runtimeConfig: {

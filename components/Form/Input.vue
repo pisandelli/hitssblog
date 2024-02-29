@@ -10,7 +10,10 @@ const model = defineModel<string>()
 <template lang="pug">
 StackL(tag='label' :for='$attrs.id')
   span: slot
-  input.form-input(v-bind='$attrs' v-model='model')
+  template(v-if="$attrs.type === 'textarea'")
+    textarea.form-input(v-bind='$attrs' v-model='model')
+
+  input.form-input(v-else v-bind='$attrs' v-model='model')
 </template>
 
 <style lang="stylus" scoped>

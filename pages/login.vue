@@ -4,8 +4,6 @@
 * @name 'LoginPage'
 * @version 1.0.0
 */
-
-// TODO Mudar botão de Login
 import { useAuthStore } from '~/store/Auth'
 const authStore = useAuthStore()
 

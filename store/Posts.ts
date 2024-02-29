@@ -16,28 +16,34 @@ export const usePostsStore = defineStore('Posts', () => {
   const posts = ref<Post[]>([])
 
   // ACTIONS
-
   /**
    * Fetches all posts from the posts service.
    * Throws an error if the response is empty.
    * Updates the posts ref with the response data.
   */
-  async function fetchAllPosts () {
-    const response = await postsService.getPosts()
-    if (!response) {
-      throw createError({
-        statusCode: 400,
-        message: 'Could not fetch posts'
-      })
+  async function fetchAllPosts() {
+    if (!posts.value.length) {
+      const response = await postsService.getPosts()
+      if (!response) {
+        throw createError({
+          statusCode: 400,
+          message: 'Could not fetch posts'
+        })
+      }
+      posts.value = response
     }
-    posts.value = response
+  }
+
+  function saveNewPost(post: Post) {
+    posts.value.push(post)
   }
 
   return {
     posts,
-    fetchAllPosts
+    fetchAllPosts,
+    saveNewPost
   }
-})
+}, { persist: { storage: persistedState.sessionStorage } })
 
 if (import.meta.hot) {
   import.meta.hot.accept(acceptHMRUpdate(usePostsStore, import.meta.hot))
