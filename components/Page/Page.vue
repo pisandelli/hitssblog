@@ -14,7 +14,8 @@ StackL(tag='article')
   header
     h2.title {{ title }}
 
-  slot
+  article
+    slot
 </template>
 
 <style lang="stylus" scoped>

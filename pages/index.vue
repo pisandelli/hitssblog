@@ -27,6 +27,3 @@ Page(title='Todas as Postagens')
       WPostCard(:postData="post")
 
 </template>
-
-<style lang="stylus" scoped>
-</style>
