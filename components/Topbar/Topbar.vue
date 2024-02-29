@@ -9,8 +9,8 @@
 <template lang="pug">
 .topbar
   ClusterL(between)
-    span Logo
-    span user
+    NuxtLink(neutral to='/') Home
+    WUserNav
 
 </template>
 
@@ -19,4 +19,8 @@
   padding: calc(var(--gap) / 2) var(--gap)
   background-color: var(--color-primary)
   color: var(--color-neutral)
+  a
+    font-weight: var(--weight-bold)
+    text-decoration: none
+    color: inherit
 </style>

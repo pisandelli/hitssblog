@@ -25,9 +25,16 @@ export const useAuthStore = defineStore('Auth', () => {
     }
   }
 
+  async function logout () {
+    user.value = null
+    localStorage.removeItem('user')
+    await navigateTo('/login')
+  }
+
   return {
     user,
-    login
+    login,
+    logout
   }
 })
 

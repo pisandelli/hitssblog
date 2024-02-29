@@ -20,7 +20,7 @@ component(class='button' :is='props.tag')
 </template>
 
 <style lang="stylus" scoped>
-$variants = primary accent success danger warning info
+$variants = primary accent success danger warning info neutral
 _variant($color)
   &[outline]
     border: 1px solid
@@ -53,6 +53,7 @@ _variant($color)
   text-transform: capitalize
   letter-spacing: 0.03125rem
   border: 0
+  text-decoration: none
   &:is(:hover, :focus)
     filter: saturate(160%)
   _variant(primary)
