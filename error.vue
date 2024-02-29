@@ -4,6 +4,7 @@
 * @name 'Page404'
 * @version 1.0.0
 */
+
 </script>
 
 <template lang="pug">

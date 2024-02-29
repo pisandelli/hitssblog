@@ -13,10 +13,10 @@ BoxL.card
 
 <style lang="stylus" scoped>
 .card
-  cursor: pointer
   border-radius: var(--border-radius)
   _transition(box-shadow var(--animation-speed))
   _box-shadow()
-  &:hover
+  &:not([no-float]):hover
+    cursor: pointer
     _box-shadow($a = 12)
 </style>

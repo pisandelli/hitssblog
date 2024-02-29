@@ -4,6 +4,9 @@
 * @name 'AdminPage'
 * @version 1.0.0
 */
+definePageMeta({
+  middleware: 'auth'
+})
 </script>
 
 <template lang="pug">

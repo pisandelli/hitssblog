@@ -14,6 +14,10 @@ onMounted(async () => {
   await postStore.fetchAllPosts()
   posts.value = postStore.posts
 })
+
+definePageMeta({
+  middleware: 'auth'
+})
 </script>
 
 <template lang="pug">
