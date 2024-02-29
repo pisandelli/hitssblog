@@ -13,7 +13,6 @@ BasicLayout.layout
   CenterL(tag='main')
     slot
   footer
-    p FOOTER
 </template>
 <style lang='stylus' scoped>
 .layout
