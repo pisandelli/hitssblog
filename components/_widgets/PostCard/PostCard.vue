@@ -14,7 +14,7 @@ defineProps<{
 <template lang="pug">
 Card(nogap).post-card
   BoxL(tag='header' nogap)
-    NuxtImg(:src='postData.banner' width='100%' height='100%' alt='title')
+    NuxtImg.img(:src='postData.banner' alt='title')
     ClusterL.info(between)
       small <strong>Por</strong> {{ postData.author }}
       small {{ postData.datePosted }}
@@ -50,4 +50,8 @@ Card(nogap).post-card
   -webkit-box-orient: vertical
   overflow: hidden
   font-size: var(--font-size-small)
+
+.img
+  width: 100%
+  height: 100%
 </style>
