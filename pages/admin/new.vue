@@ -51,7 +51,7 @@ function savePost() {
     id: incrementID.value,
     title: titulo.value,
     excerpt: excerpt.value,
-    banner: banner.value,
+    banner: '/07.webp',
     content: content.value,
     author,
     url: '#',
